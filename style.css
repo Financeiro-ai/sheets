@@ -1,0 +1,637 @@
+/* Google Fonts - Outfit */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --bg-primary: #141516;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-border: rgba(255, 255, 255, 0.08);
+  --accent-cyan: #CAF3FF;
+  --text-main: #FFFFFF;
+  --text-muted: #9CA3AF;
+
+  /* Spacing */
+  --container-width: 1200px;
+  --padding-section: 80px;
+
+  /* 3D Book */
+  --book-width: 300px;
+  --book-height: 450px;
+  --book-thickness: 50px;
+  --spine-color: #232323;
+  --page-color: #f5f5f5;
+  --cover-bg: #1e1e1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+}
+
+em {
+  font-family: 'Times New Roman', serif;
+  /* Simulating the italic serif mix */
+  font-style: italic;
+  color: var(--accent-cyan);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+/* Scroll Offset for Anchors */
+#metodo {
+  scroll-margin-top: 30px;
+}
+
+#conteudo {
+  scroll-margin-top: 120px;
+}
+
+#pricing {
+  scroll-margin-top: 10px;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-cyan);
+  color: #000;
+  border: 1px solid var(--accent-cyan);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(202, 243, 255, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-main);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Navbar */
+.navbar {
+  padding: 10px 0;
+  border: 1px solid var(--bg-card-border);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 10px;
+  z-index: 1000;
+  background: rgba(20, 21, 22, 0.8);
+  border-radius: 24px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: var(--container-width);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 0 0;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto 100px;
+  /* Increased from 60px */
+}
+
+.hero-visual {
+  width: 100%;
+  border-radius: 16px;
+  /* Full rounded corners */
+  overflow: hidden;
+  box-shadow: 0 -20px 80px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1e1e1e;
+  /* Placeholder for image */
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Glow effects */
+.glow-spot {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(202, 243, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glow-top-right {
+  top: -100px;
+  right: 0;
+}
+
+.glow-bottom-left {
+  bottom: 0;
+  left: -100px;
+}
+
+
+/* Features Section */
+.features {
+  padding: var(--padding-section) 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  padding: 2rem;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+/* Workflow / Friction */
+.workflow {
+  padding: var(--padding-section) 0;
+}
+
+.workflow-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.workflow-text h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.device-mockup {
+  background: #222;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+}
+
+/* Pricing */
+.pricing {
+  padding: var(--padding-section) 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  padding: 2.5rem;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.highlight {
+  background: linear-gradient(135deg, rgba(202, 243, 255, 0.05) 0%, rgba(202, 243, 255, 0.01) 100%);
+  border-color: rgba(202, 243, 255, 0.3);
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.price span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.features-list {
+  margin: 2rem 0;
+  flex-grow: 1;
+}
+
+.features-list li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.check-icon {
+  color: var(--accent-cyan);
+}
+
+/* Footer */
+footer {
+  padding: 60px 0 40px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  :root {
+    --padding-section: 60px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  /* Navbar */
+  .nav-links {
+    display: none;
+  }
+
+  /* Layout Adjustments */
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  .workflow-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .pricing-grid {
+    padding: 0 10px;
+  }
+
+  .card,
+  .pricing-card {
+    padding: 1.5rem;
+  }
+}
+
+/* 3D Book Component */
+
+.book-scene {
+  width: var(--book-width);
+  height: var(--book-height);
+  perspective: 2000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  /* Initial State (Hidden) - CONTROLLED HERE */
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+}
+
+.book {
+  width: var(--book-width);
+  height: var(--book-height);
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateY(100px) rotateY(-40deg);
+  transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Face Commons - Center Everything */
+.book-face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  backface-visibility: hidden;
+}
+
+/* Front (Cover) */
+.book-front {
+  width: var(--book-width);
+  height: var(--book-height);
+  margin-left: calc(var(--book-width) / -2);
+  margin-top: calc(var(--book-height) / -2);
+  transform: translateZ(calc(var(--book-thickness) / 2));
+  background: var(--cover-bg);
+  border-radius: 4px 8px 8px 4px;
+  overflow: hidden;
+}
+
+.book-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px 8px 8px 4px;
+}
+
+/* Back */
+.book-back {
+  width: var(--book-width);
+  height: var(--book-height);
+  margin-left: calc(var(--book-width) / -2);
+  margin-top: calc(var(--book-height) / -2);
+  transform: rotateY(180deg) translateZ(calc(var(--book-thickness) / 2));
+  background: var(--spine-color);
+  border-radius: 4px 8px 8px 4px;
+}
+
+/* Spine (Left) */
+.book-spine {
+  width: var(--book-thickness);
+  height: var(--book-height);
+  margin-left: calc(var(--book-thickness) / -2);
+  margin-top: calc(var(--book-height) / -2);
+  transform: translateX(calc(var(--book-width) / -2)) rotateY(-90deg);
+  background: var(--spine-color);
+}
+
+/* Pages (Right) */
+.book-pages {
+  width: var(--book-thickness);
+  height: calc(var(--book-height) - 10px);
+  margin-left: calc(var(--book-thickness) / -2);
+  margin-top: calc((var(--book-height) - 10px) / -2);
+  transform: translateX(calc(var(--book-width) / 2)) rotateY(90deg);
+  background: linear-gradient(to right, #e0e0e0, #fff 20%, #e0e0e0 40%, #fff 60%, #e0e0e0 80%, #fff);
+  background-size: 4px 100%;
+}
+
+/* Top */
+.book-top {
+  width: var(--book-width);
+  height: var(--book-thickness);
+  margin-left: calc(var(--book-width) / -2);
+  margin-top: calc(var(--book-thickness) / -2);
+  transform: translateY(calc(var(--book-height) / -2)) rotateX(90deg);
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+}
+
+/* Bottom */
+.book-bottom {
+  width: var(--book-width);
+  height: var(--book-thickness);
+  margin-left: calc(var(--book-width) / -2);
+  margin-top: calc(var(--book-thickness) / -2);
+  transform: translateY(calc(var(--book-height) / 2)) rotateX(-90deg);
+  background: linear-gradient(to top, #f0f0f0, #e0e0e0);
+}
+
+
+/* VISIBLE STATE - Animation */
+.book-scene.is-visible {
+  opacity: 1;
+}
+
+.book-scene.is-visible .book {
+  transform: translateY(0) rotateY(25deg) rotateX(10deg) rotateZ(-2deg);
+}
+
+/* SHADOW */
+.book-shadow {
+  position: absolute;
+  width: var(--book-width);
+  height: 60px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  bottom: -30px;
+  left: 0;
+  transform: rotateX(90deg) scale(0.8);
+  opacity: 0;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.book-scene.is-visible .book-shadow {
+  opacity: 1;
+  transform: rotateX(90deg) scale(1);
+  bottom: -40px;
+}
+
+/* Overrides */
+.device-mockup:has(.book-scene) {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+/* Canvas Background */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  /* Let clicks pass through */
+}
+
+/* Reveal on Scroll Animation */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-slow {
+  transition-duration: 1.5s;
+  /* Slower duration */
+}
+
+.reveal-slower {
+  transition-duration: 2.5s;
+  /* Extra slow duration */
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Image - Start Hidden */
+#hero-image {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+#hero-image.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}

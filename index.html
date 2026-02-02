@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domine Planilhas | MasterClass + Ebook</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons for modern SVG icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <meta name="description" content="Aprenda planilhas bonitas e funcionais de forma quase automática.">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="#" class="logo">Planilha com IA<span style="color:var(--accent-cyan)">.</span></a>
+            <div class="nav-links">
+                <a href="#conteudo">Aprenda</a>
+                <a href="#metodo">Sobre</a>
+                <a href="#pricing">Produtos</a>
+            </div>
+            <a href="https://pay.kiwify.com.br/pO2zrCx" class="btn btn-outline">Eu quero</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="glow-spot glow-top-right"></div>
+        <div class="glow-spot glow-bottom-left"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal-on-scroll reveal-slower">Crie qualquer planilha com IA no <em>Google Sheets</em></h1>
+                <p class="reveal-on-scroll reveal-slow" data-delay="300" style="margin: 1.5rem 0 2rem;">
+                    Chega de planilhas complexas. Aprenda a criar qualquer planilha — do controle de estoque à gestão de
+                    clientes, do planejamento de estudos às suas metas financeiras — usando IA.
+                </p>
+                <div class="flex justify-center gap-1 reveal-on-scroll reveal-slow" data-delay="400">
+                    <a href="https://pay.kiwify.com.br/pO2zrCx" class="btn btn-primary">Começar Agora</a>
+                    <a href="#conteudo" class="btn btn-outline">Ver Conteúdo</a>
+                </div>
+            </div>
+
+            <div class="hero-visual" id="hero-image">
+                <!-- Placeholder for Dashboard Image -->
+                <img src="assets/prev.png" alt="Preview de Planilha Profissional">
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition / Features -->
+    <section id="metodo" class="features">
+        <div class="container">
+            <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+                <h2>Aplique inteligência na <br><em>sua organização</em></h2>
+                <p>Não é só sobre fórmulas. É sobre construir a sua central de comando com acabamento
+                    profissional.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="ph ph-lightning"></i>
+                    </div>
+                    <h3>Automação</h3>
+                    <p>Pare de perder tempo preenchendo células manualmente. Aprenda importações automáticas e scripts.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="ph ph-chart-pie-slice"></i>
+                    </div>
+                    <h3>Visualização</h3>
+                    <p>Transforme dados brutos em gráficos claros. Crie dashboards que parecem aplicativos.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="ph ph-shield-check"></i>
+                    </div>
+                    <h3>Organização</h3>
+                    <p>Organize qualquer tipo de dados: projetos, clientes, estoque, fluxos, tarefas e muito mais.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="ph ph-student"></i>
+                    </div>
+                    <h3>Didática</h3>
+                    <p>Guia passo-a-passo, do zero ao avançado, sem enrolação técnica desnecessária.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section id="conteudo" class="workflow">
+        <div class="container">
+            <div class="workflow-content">
+                <div class="workflow-text">
+                    <h2>Deixe de lado as planilhas <em>confusas</em></h2>
+                    <p style="margin-top: 1.5rem;">
+                        A maioria das planilhas são feias, difíceis de usar e quebram fácil.
+                        Nossa metodologia ensina a estrutura profissional usada por grandes empresas — e você pode
+                        aplicar em qualquer área.
+                    </p>
+                    <ul style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                        <li class="flex items-center gap-1">
+                            <i class="ph ph-check-circle" style="color: var(--accent-cyan); font-size: 1.25rem;"></i>
+                            <span>Estrutura de Banco de Dados</span>
+                        </li>
+                        <li class="flex items-center gap-1">
+                            <i class="ph ph-check-circle" style="color: var(--accent-cyan); font-size: 1.25rem;"></i>
+                            <span>Design de Interface (UI) no Sheets</span>
+                        </li>
+                        <li class="flex items-center gap-1">
+                            <i class="ph ph-check-circle" style="color: var(--accent-cyan); font-size: 1.25rem;"></i>
+                            <span>Dashboards Interativos</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="device-mockup">
+                    <div class="book-scene">
+                        <div class="book">
+                            <div class="book-face book-front">
+                                <img src="assets/Ebook.png" alt="Capa do Ebook">
+                            </div>
+                            <div class="book-face book-back"></div>
+                            <div class="book-face book-spine"></div>
+                            <div class="book-face book-pages"></div>
+                            <div class="book-face book-top"></div>
+                            <div class="book-face book-bottom"></div>
+                        </div>
+                        <div class="book-shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="text-center">
+                <h2>Aprenda hoje</h2>
+                <p>O conhecimento definitivo para elevar sua organização a um novo patamar.</p>
+            </div>
+
+            <div class="pricing-grid" style="display: flex; justify-content: center;">
+                <!-- Single Plan -->
+                <div class="pricing-card highlight" style="max-width: 450px; width: 100%;">
+                    <div
+                        style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent-cyan); color: #000; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 700;">
+                        OFERTA ÚNICA</div>
+                    <h3>Pacote Exclusivo</h3>
+                    <p class="text-muted">MasterClass + Guia Completo</p>
+                    <div class="price">R$ 24<span>,90</span></div>
+
+                    <ul class="features-list">
+                        <li><i class="ph ph-check check-icon"></i> Ebook Completo (PDF)</li>
+                        <li><i class="ph ph-check check-icon"></i> MasterClass</li>
+                        <li><i class="ph ph-check check-icon"></i> Pack de Prompts Premium</li>
+                        <li><i class="ph ph-check check-icon"></i> Acesso Vitalício</li>
+                        <li><i class="ph ph-gift" style="color: var(--accent-cyan);"></i> Bônus: Meu Template Automático
+                            para Gestão de Estudos (Copie, Cole e Use)</li>
+                    </ul>
+
+                    <a href="https://pay.kiwify.com.br/pO2zrCx" class="btn btn-primary"
+                        style="text-align: center;">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">Planilha com IA.</div>
+            <div style="font-size: 0.9rem; color: var(--text-muted);">
+                &copy; 2026 Planilhas com IA. Todos os direitos reservados.
+            </div>
+            <div class="flex gap-1" style="font-size: 1.5rem;">
+                <i class="ph ph-instagram-logo"></i>
+                <i class="ph ph-youtube-logo"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
