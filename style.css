@@ -425,6 +425,11 @@ footer {
     padding: 0 10px;
   }
 
+  .hero-visual {
+    min-height: auto;
+    margin-bottom: 40px;
+  }
+
   .workflow-content {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -443,6 +448,12 @@ footer {
   .card,
   .pricing-card {
     padding: 1.5rem;
+  }
+
+  .device-mockup {
+    height: auto !important;
+    min-height: 500px !important;
+    align-items: flex-start !important;
   }
 }
 
